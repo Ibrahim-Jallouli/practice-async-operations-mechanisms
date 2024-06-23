@@ -59,12 +59,12 @@ function makeHTTPRequest(url, callback) {
             callback(new Error(`La requête a échoué avec le code d'état ${res.statusCode}`));
             return;
         }else{
-            callback(null, res);
+            callback(null, res.statusCode);
         }
     })
 }
 
-makeHTTPRequest('https://www.youtube.com/watch?v=5NPBIwQyPWE&list=RD5NPBIwQyPWE&start_radio=1', (err, data) => {
+makeHTTPRequest('https://www.youtube.com/', (err, data) => {
     if (err) {
         console.error('Erreur:', err.message);
     } else {

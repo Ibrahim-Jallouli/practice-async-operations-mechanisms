@@ -42,7 +42,7 @@ async function makeHTTPRequest(url){
     }
 }
 
-makeHTTPRequest('http://jsonplaceholder.typicode.com/posts/1')
+makeHTTPRequest('https://www.youtube.com/')
     .then((res) => {
         if (res.statusCode !== 200) {
             throw new Error(`La requête a échoué avec le code d'état ${res.statusCode}`);
